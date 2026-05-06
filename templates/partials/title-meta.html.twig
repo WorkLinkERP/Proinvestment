@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hosue - Single Property Template</title>
+
+<!--=====FAB ICON=======-->
+{% if logo2 is defined %}
+    <link rel="shortcut icon" href="/img/logo/fav-logo2.png" type="image/x-icon">
+{% elseif logo1 is defined %}
+    <link rel="shortcut icon" href="/img/logo/fav-logo1.png" type="image/x-icon">
+{% elseif logo4 is defined %}
+    <link rel="shortcut icon" href="/img/logo/fav-logo4.png" type="image/x-icon">
+{% elseif logo5 is defined %}
+    <link rel="shortcut icon" href="/img/logo/fav-logo5.png" type="image/x-icon">
+{% elseif logo6 is defined %}
+    <link rel="shortcut icon" href="/img/logo/fav-logo6.png" type="image/x-icon">
+{% elseif logo7 is defined %}
+    <link rel="shortcut icon" href="/img/logo/fav-logo7.png" type="image/x-icon">
+{% elseif logo8 is defined %}
+    <link rel="shortcut icon" href="/img/logo/fav-logo8.png" type="image/x-icon">
+{% elseif logo9 is defined %}
+    <link rel="shortcut icon" href="/img/logo/fav-logo9.png" type="image/x-icon">
+{% elseif logo10 is defined %}
+    <link rel="shortcut icon" href="/img/logo/fav-logo10.png" type="image/x-icon">
+{% else %}
+    <link rel="shortcut icon" href="/img/logo/fav-logo3.png" type="image/x-icon">
+{% endif %}
