@@ -1,0 +1,13 @@
+.git
+.gitignore
+.env.local
+.env.local.php
+var/cache/*
+var/log/*
+node_modules
+npm-debug.log
+.DS_Store
+.vscode
+.idea
+*.swp
+*.swo
