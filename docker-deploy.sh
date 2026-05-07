@@ -4,6 +4,8 @@ set -e
 
 echo "🚀 Starting Proinvestment Docker Compose deployment..."
 
+COMPOSE="docker compose --env-file .env.local -f compose.yaml"
+
 # Copy environment file if it doesn't exist
 if [ ! -f .env.local ]; then
     echo "📋 Creating .env.local from .env.docker..."
@@ -13,11 +15,11 @@ fi
 
 # Build images
 echo "🔨 Building Docker images..."
-docker-compose build
+$COMPOSE build
 
 # Start services
 echo "🐳 Starting services..."
-docker-compose up -d
+$COMPOSE up -d
 
 # Wait for database to be healthy
 echo "⏳ Waiting for database to be ready..."
@@ -25,12 +27,12 @@ sleep 10
 
 # Run migrations
 echo "🗄️  Running database migrations..."
-docker-compose exec -T web php bin/console doctrine:database:create --if-not-exists
-docker-compose exec -T web php bin/console doctrine:migrations:migrate --no-interaction
+$COMPOSE exec -T web php bin/console doctrine:database:create --if-not-exists
+$COMPOSE exec -T web php bin/console doctrine:migrations:migrate --no-interaction
 
 # Clear cache
 echo "🧹 Clearing cache..."
-docker-compose exec -T web php bin/console cache:clear
+$COMPOSE exec -T web php bin/console cache:clear
 
 echo "✅ Deployment complete!"
 echo ""
@@ -40,5 +42,5 @@ echo "  - Mailpit: http://localhost:8025"
 echo ""
 echo "📝 Next steps:"
 echo "  1. Update .env.local with your production secrets"
-echo "  2. Run: docker-compose restart web"
-echo "  3. Check logs: docker-compose logs -f web"
+echo "  2. Run: docker compose --env-file .env.local -f compose.yaml restart web"
+echo "  3. Check logs: docker compose --env-file .env.local -f compose.yaml logs -f web"

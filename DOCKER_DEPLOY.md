@@ -22,6 +22,14 @@ docker-compose exec web php bin/console doctrine:migrations:migrate
 docker-compose exec web php bin/console cache:clear
 ```
 
+For the live server, prefer the deploy script or pass the live env file explicitly:
+```bash
+docker compose --env-file .env.local -f compose.yaml build
+docker compose --env-file .env.local -f compose.yaml up -d
+docker compose --env-file .env.local -f compose.yaml exec web php bin/console doctrine:migrations:migrate
+docker compose --env-file .env.local -f compose.yaml exec web php bin/console cache:clear
+```
+
 ## Services
 
 - **web**: PHP-FPM (port 9000)
@@ -34,22 +42,29 @@ docker-compose exec web php bin/console cache:clear
 ```bash
 # View logs
 docker-compose logs -f web
+docker compose --env-file .env.local -f compose.yaml logs -f web
 
 # SSH into web container
 docker-compose exec web bash
+docker compose --env-file .env.local -f compose.yaml exec web bash
 
 # Run console commands
 docker-compose exec web php bin/console cache:clear
 docker-compose exec web php bin/console assets:install
+docker compose --env-file .env.local -f compose.yaml exec web php bin/console cache:clear
+docker compose --env-file .env.local -f compose.yaml exec web php bin/console assets:install
 
 # Database backup
 docker-compose exec database pg_dump -U app app > backup.sql
+docker compose --env-file .env.local -f compose.yaml exec database pg_dump -U app app > backup.sql
 
 # Restart services
 docker-compose restart
+docker compose --env-file .env.local -f compose.yaml restart
 
 # Stop services
 docker-compose down
+docker compose --env-file .env.local -f compose.yaml down
 
 # Remove volumes (⚠️ deletes data)
 docker-compose down -v

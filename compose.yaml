@@ -7,9 +7,13 @@ services:
       dockerfile: Dockerfile
     container_name: proinvestment_web
     restart: always
+    env_file:
+      - .env.local
     environment:
       APP_ENV: ${APP_ENV:-prod}
       APP_DEBUG: ${APP_DEBUG:-0}
+      APP_SECRET: ${APP_SECRET}
+      MAILER_DSN: ${MAILER_DSN}
       DATABASE_URL: postgresql://${POSTGRES_USER:-app}:${POSTGRES_PASSWORD:-!ChangeMe!}@database:5432/${POSTGRES_DB:-app}?serverVersion=16
     volumes:
       - ./public:/app/public:ro
