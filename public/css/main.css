@@ -24918,9 +24918,9 @@ html {
 
 .homepage3-body .header-area.homepage3 .site-logo,
 .pi-site-logo {
-  width: 150px !important;
-  height: 62px !important;
-  flex: 0 0 150px;
+  width: 135px !important;
+  height: 56px !important;
+  flex: 0 0 135px;
 }
 
 .pi-site-logo a,
@@ -24931,9 +24931,10 @@ html {
 }
 
 .pi-site-logo img {
-  max-height: 62px;
+  max-height: 56px;
   width: auto;
   object-fit: contain;
+  padding: 6px;
 }
 
 .homepage3-body .header-area.homepage3 .header-elements .main-menu ul {
@@ -24964,14 +24965,15 @@ html {
 
 .mobile-logo.pi-mobile-logo,
 .logos.pi-mobile-logo {
-  width: 142px;
-  height: 70px;
+  width: 128px;
+  height: 63px;
 }
 
 .mobile-logo.pi-mobile-logo img,
 .logos.pi-mobile-logo img {
-  max-height: 70px;
+  max-height: 63px;
   width: auto;
+  padding: 6px;
 }
 
 .pi-service-card__icon::before,
@@ -25060,8 +25062,8 @@ html {
 @media (max-width: 1199px) {
   .homepage3-body .header-area.homepage3 .site-logo,
   .pi-site-logo {
-    width: 126px !important;
-    flex-basis: 126px;
+    width: 113px !important;
+    flex-basis: 113px;
   }
 
   .homepage3-body .header-area.homepage3 .header-elements .main-menu ul li a {
