@@ -25081,3 +25081,150 @@ html {
     margin-top: 30px;
   }
 }
+
+/*============= PROINVESTMENTS REQUESTED REFINEMENTS ===============*/
+.pi-hero__media img {
+  object-position: center;
+  filter: saturate(0.9) contrast(1.12) brightness(0.62);
+}
+
+.pi-hero__veil {
+  background: linear-gradient(90deg, rgba(23, 15, 50, 0.98) 0%, rgba(35, 22, 71, 0.86) 48%, rgba(23, 15, 50, 0.4) 100%);
+}
+
+.pi-service-card--dark {
+  background: #8f1719;
+}
+
+.pi-service-card--dark p,
+.pi-service-card--dark h3,
+.pi-service-card--dark span {
+  color: #fff !important;
+}
+
+.pi-service-card--dark span:not(.pi-service-card__icon) {
+  color: rgba(255, 255, 255, 0.94) !important;
+}
+
+.header-area.homepage3.sticky {
+  background: transparent;
+  box-shadow: none;
+  padding: 12px 0;
+}
+
+.header-area.homepage3.sticky .header-elements {
+  padding: 8px 18px;
+  box-shadow: 0 18px 60px rgba(35, 22, 71, 0.12);
+}
+
+.pi-contact-strip__inner {
+  align-items: center;
+}
+
+.pi-contact-strip__inner .header-btn3 {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.pi-footer {
+  background: var(--pi-indigo);
+  color: #fff;
+}
+
+.pi-footer__top {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.pi-footer .heading3 h2,
+.pi-footer h4 {
+  color: #fff;
+}
+
+.pi-footer__lead {
+  margin-top: 18px;
+  max-width: 640px;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.7;
+}
+
+.pi-footer__contact a,
+.pi-footer__contact span {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.pi-footer .footer3-bottom-section {
+  background: var(--pi-indigo);
+}
+
+.pi-footer .footer-bottom-area {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  padding-top: 36px;
+}
+
+.pi-footer .footer-menu h4,
+.pi-footer .footer-menu2 h4 {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.pi-footer .footer-menu ul,
+.pi-footer .footer-menu2 ul {
+  align-items: flex-start !important;
+}
+
+.pi-footer .footer-menu ul li a,
+.pi-footer .footer-menu2 ul li a,
+.pi-footer .copyright-area p {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+.pi-footer .footer-menu2 ul {
+  display: grid !important;
+  gap: 12px;
+}
+
+.pi-contact-form .input-area input,
+.pi-contact-form .input-area textarea,
+.pi-contact-form .input-area .nice-select {
+  width: 100%;
+  border: 1px solid rgba(35, 22, 71, 0.24) !important;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--pi-indigo);
+  box-shadow: none;
+}
+
+.pi-contact-form .input-area input:focus,
+.pi-contact-form .input-area textarea:focus,
+.pi-contact-form .input-area .nice-select.open,
+.pi-contact-form .input-area .nice-select:focus {
+  border-color: var(--pi-red) !important;
+  box-shadow: 0 0 0 4px rgba(238, 48, 38, 0.12);
+}
+
+.pi-contact-form .input-area .nice-select {
+  height: 54px;
+  line-height: 52px;
+  padding: 0 44px 0 18px;
+}
+
+.pi-contact-form .input-area .nice-select::after {
+  border-color: var(--pi-red);
+  right: 18px;
+}
+
+.pi-contact-form .input-area .nice-select .list {
+  width: 100%;
+  border: 1px solid rgba(35, 22, 71, 0.14);
+  border-radius: 8px;
+  box-shadow: 0 18px 45px rgba(35, 22, 71, 0.14);
+}
+
+.pi-contact-form .input-area .nice-select .option:hover,
+.pi-contact-form .input-area .nice-select .option.focus,
+.pi-contact-form .input-area .nice-select .option.selected.focus {
+  background: var(--pi-paper);
+  color: var(--pi-red);
+}
